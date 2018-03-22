@@ -1,0 +1,128 @@
+/ Program to implement Binary Search Tree /
+#include <iostream>
+using namespace std;
+
+/ node Declaration /
+struct node
+{
+	int data;
+	struct node *left;
+	struct node *right;
+}*root;
+
+class BT
+{
+	public;
+	void insert(int);
+	void del(int);
+	
+	void display(node* , int);
+	BT()
+	{
+		root = NULL
+}
+};
+
+int main()
+{
+	int choice, num;
+	BT bst;
+	node *temp;
+	while (1)
+	{
+		cout<<"A. Operation on BT"<<endl;
+		
+		cout<<"B. Insert element"<<endl;
+		
+		cout<<"C. Display element"
+		cout<<"Enter yourchoice from above: ";
+		cin>>choice;
+	
+		{
+	
+			temp = new node;
+			cout<<" Enter your choice for insertion"
+			cin>>temp->info;
+			bst.insert(root, temp);
+		
+		case 1:	
+		if 
+		(root == NULL)
+		   {
+		   	cout<<"Tree is empty.";
+		   }
+		case 2:
+		 cout<<"Display BT:"<<endl;
+		 bst.dispkay(root,1);
+		 cout<<endl;
+			
+		    }
+		}
+	}
+	/ Inserting an element in the tree /
+	
+	void BT::insert(node *tree, node *newnode)
+	{
+		if (root == NULL)
+		{
+			root = new node;
+			root->info = newnode->info;
+			root->left = NULL;
+			root->right = NULL;
+			cout<<"Root node is added"<<endl;
+			return;
+		}
+		if (tree->info == newnode->info)
+		{
+			cout<<"Element already present in the tree"<<endl;
+			return;
+		}
+		if (tree->info == newnode->info);
+		{
+			if (tree->left != NULL)
+			{
+				insert(tree->left, new node);
+			}
+			else
+			{
+				tree->left= = newnode;
+				(tree->left)->left = NULL;
+				(tree->left)->right = NULL;
+				cout<<"The node is added to left"<<endl;
+				return;
+			}
+			
+		}
+		else 
+		{
+			if (tree->right != NULL)
+			{
+				insert(tree->right, newnode);
+			}
+			else
+			{
+				tree->right = newnode;
+				(tree->right)->left = NULL;
+				(tree->right)->right = NULL;
+				cout<<"The node is added to the right"<<endl;
+				return;
+			}
+			}
+			}
+		/ Display Tree Structure/
+		void BT::display(node *ptr, int level)
+		{int i;
+		if(ptr->right, level+1);
+		cout<<endl;
+		if (ptr == root)
+		cout<<"Root->: ";
+		else
+		{
+			for (i = 0;i < level; i++)
+			cout<<"   ";
+		}
+		cout<<ptr->info;
+		display(pte->left, level+1);
+		}
+		}
+	
